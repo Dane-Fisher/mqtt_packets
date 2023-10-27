@@ -1,5 +1,5 @@
 # Overview
-H2o Degree uses mqtt as its main data flow pipeline. Devices such as thermostats, water meters , etc generate basic metrics; these metrics are polled by gateways usually in a
+H2o Degree uses [MQTT](https://mqtt.com) as its main data flow pipeline. Devices such as thermostats, water meters , etc generate basic metrics; these metrics are polled by gateways usually in a
 mesh network and then sent to over mqtt to applications that will consume said data for various purposes.
 In an attempt to organize / standardize this process, the h2o engineering team came up with a way to structure the different types of data so that applications consuming it will know what
 the data structure of a certian device(s) will look like.
@@ -10,16 +10,20 @@ the data structure of a certian device(s) will look like.
     1. [broker](#subparagraph1)
     2. [client](#client)
 3. [Device Types](#devices)
-    1. [lora](#lora)
-        1. [devices](#devices)
-            1. [topics](#topics)
-            2. [messages](#messages)
-    2. [zigbee](#zigbee)
-        1. [devices](#devices)
-            1. [topics](#topics)
-            2. [messages](#messages)
+    1. [Lora](#lora)
+        1. [Devices](#devices)
+            1. [Topics](#topics)
+            2. [Messages](#messages)
+    2. [Zigbee](#zigbee)
+        1. [Devices](#devices)
+            1. [Topics](#topics)
+            2. [Messages](#messages)
 
 
+
+# Usage
+ To consume the data you must first make a connection to the broker. H2O Degree uses a cloud based mqtt broker called [cloudMQTT](https://cloudmqtt.com). You need access to it for the ability
+to subscribe to and publish data on the H2O mqtt instance.
 
 # Element Definitions
 
