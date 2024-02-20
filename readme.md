@@ -1,7 +1,10 @@
 # Overview
-H2o Degree uses MQTT as its main data flow pipeline. Devices like thermostats, water meters and humidity sensors all emit data, receive commands and have configurations. This is all controlled by a system comprised of applications, gateways, workers, and databases. To communicate with each other in a standardized way, mqtt messages in the form of downlinks (commands) and uplinks (responses) are used. They are nothing more than normal mqtt messages in the sense that they have a topic and a message part. Where they differ is in what the topic and message contain. This Repo will organize the devices supported by H2o Degree in the table below, and show the downlinks and uplinks for each. This will in turn give you everything you need to know about interacting with a device on an application level.
+H2o Degree uses MQTT as its main data flow pipeline. Devices like thermostats, water meters and humidity sensors all emit data, receive commands and have configurations. This is all controlled by a system comprised of applications, gateways, workers, and databases. To communicate with each other in a standardized way, mqtt messages in the form of downlinks (commands) and uplinks (responses) are used. They are nothing more than normal mqtt messages in the sense that they have a topic and a message part. Where they differ is in what the topic and message contain.
 
-Checkout the uplink commands in response packets directory and checkout the downlink commands in the downlinkPackets directory. 
+This Repo will organize the devices supported by H2o Degree in the table below, and show the downlinks and uplinks for each. This will in turn give you everything you need to know about interacting with a device on an application level.
+
+Click the link in the docs column to learn more about the device
+
 
 **Note:**
 Currently these are the Devices known to siteManager 2.0
