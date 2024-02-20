@@ -8,19 +8,19 @@ Before you control a device you must make a successfull connection to the mqtt b
 To do this you will need the following auth info:
 
 ```json
-var options = {
+{
     port: <port number>,
     host: <hostname>,
     clientId: '<random_client_id>', 
     username: '<username>',
     password: '<password>',
-    keepalive: 60 (optional),
-    reconnectPeriod: 1000 (optional),
-    protocolId: 'MQIsdp' (optional),
-    protocolVersion: 3 (optional),
-    clean: true (optional),
-    encoding: 'utf8 (optional)'
-};
+    keepalive: 60,
+    reconnectPeriod: 1000,
+    protocolId: 'MQIsdp',
+    protocolVersion: 3,
+    clean: true,
+    encoding: 'utf8'
+}
 ```
 
 ```json
@@ -79,12 +79,12 @@ After connecting to the client, you will have to pass h2o degree downlink authen
 You do that by sending this auth object **ALONG** with the downlink payload
 
 
-Then you will get the following series of topic responses back immediatly after sending a good command
+Then you will get the a series of responses back on the following topics immediatly after sending a properly formed command
 
 ```mqtt
 downlink_response/{property_id}/{source_application_token}/{qr}/{dev_eui}/{response}
 ```
-Where {response} can be any of the following 
+*Where {response} can be any of the following* 
 
  - auth_request_received - ack for the auth request
  - auth_request_accepted 
