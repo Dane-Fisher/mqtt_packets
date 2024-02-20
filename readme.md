@@ -8,7 +8,6 @@ Currently these are the Devices known to siteManager 2.0
 
 **QR Index**|**QR**|**JSON QR Index**|**Part Number**|**Description**|**Unit Code**|**Docs**|
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-
 1006|qr1006|1006|M53450-HPH|Thermostat|42|[Thermostat](devices/thermostats.md)|
 1009|qr1009|1009|M52450-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)|
 92|qr92|92|T1000|Kono TStat|129|[Thermostat](devices/thermostats.md)|
