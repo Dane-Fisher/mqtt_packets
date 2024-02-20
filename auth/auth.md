@@ -76,8 +76,85 @@ To do this you will need the following auth info:
 
 After connecting to the client, you will have to pass h2o degree downlink authentication flow.
 
-You do that by sending this auth object **ALONG** with the downlink payload
+You do that by sending the following auth message object **ALONG** with the downlink_payload (the command) on the following topic:
 
+#### Auth Topic
+
+```mqtt
+downlink_auth_request/{source_application_token}
+```
+Where the source application token is arbitrarly made up for mqtt bus filtering
+
+#### Auth Message
+
+```json
+{
+                "user_id" : 9
+                "target_unique_id" : 368081,
+                "sk" : "xxxxxxxxxxxxxxx",
+                "target_property_id" : 480,
+                "target_dev_eui" : "000D6F0011112222",
+                "user_email" : "billw@",
+                "target_hostname_list" : [ "0202000007009999","FFFF000010101010","m1058653","royal_oaks" ]
+                "qr": 80
+                "command" : "set_cool_setpoint"
+                "command_token" : "ldf_bwild_portal_tpanel",
+                
+                "downlink_payload" : { "setpoint'": 53 } 
+}
+```
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "integer"
+    },
+    "target_unique_id": {
+      "type": "integer"
+    },
+    "sk": {
+      "type": "string"
+    },
+    "target_property_id": {
+      "type": "integer"
+    },
+    "target_dev_eui": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "target_hostname_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "qr": {
+      "type": "integer"
+    },
+    "command": {
+      "type": "string",
+      "enum": ["set_cool_setpoint"]
+    },
+    "command_token": {
+      "type": "string"
+    },
+    "downlink_payload": {
+      "type": "object",
+      "properties": {
+        "setpoint": {
+          "type": "integer"
+        }
+      },
+      "required": ["setpoint"]
+    }
+  },
+  "required": ["user_id", "target_unique_id", "sk", "target_property_id", "target_dev_eui", "user_email", "target_hostname_list", "qr", "command", "command_token", "downlink_payload"]
+}
+```
 
 Then you will get the a series of responses back on the following topics immediatly after sending a properly formed command
 
