@@ -1,7 +1,7 @@
 # Overview
-H2o Degree uses MQTT as its main data flow pipeline. Devices like thermostats, water meters and humidity sensors all emit data, receive commands and have configurations. This is all controlled by a system comprised of applications, gateways, workers, and databases. To keep it all organized H2o Engineering has created a general structure to utilize all functions of every supported device. This Document will use a top down approach to describe this structure.
+H2o Degree uses MQTT as its main data flow pipeline. Devices like thermostats, water meters and humidity sensors all emit data, receive commands and have configurations. This is all controlled by a system comprised of applications, gateways, workers, and databases. To communicate with each other in a standardized way, mqtt messages in the form of downlinks (commands) and uplinks (responses) are used. They are nothing more than normal mqtt messages in the sense that they have a topic and a message part. Where they differ is in what the topic and message contain. This Repo will organize the devices supported by H2o Degree in the table below, and show the downlinks and uplinks for each. This will in turn give you everything you need to know about interacting with a device on an application level.
 
-The top of the tree starts with the specific Device. This is in refence to a speicific item with a unique part number. For example T-1000 Thermostat. From the specific device, other properties are derrived. The schema follows this structure: 
+Checkout the uplink commands in response packets directory and checkout the downlink commands in the downlinkPackets directory. 
 
 **QR Index**|**QR**|**JSON QR Index**|**Part Number**|**Description**|**Unit Code**|**Battery Powered**|**Suffix Req**|**Pulse Channels**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
