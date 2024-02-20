@@ -14,10 +14,15 @@ This document provides an overview of the MQTT topics used to send commands that
 ## Downlink Commands
 
 ### Ping
-"allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
-"command" : "ping"
+```json
+"allowedQr": [37, 38, 77, 39, 63],
+"command" : "ping",
 "payload" : {"jitter" : "true || false"}
+```
 
 ### Set Override 
-"command" : "set_override"
+```json
+"allowedQr" : [37, 38, 77, 39, 63],
+"command" : "set_override",
 "payload" : { "override" : "clear|heat_on|heat_off" }
+```
