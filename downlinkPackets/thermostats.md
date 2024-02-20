@@ -55,15 +55,6 @@ The MQTT topics for thermostat control follow a specific structure to ensure eff
 "command" : "set_mode"
 "payload" : { "mode" : "heat|cool|off"}
 ```
-
-
-### Set Schedule Mode
-```json
-"allowedQr": [92, 105],
-"command" : "set_schedule_mode"
-"payload" : { "schedule_mode" : "permanent|temporary|program|vacation" }
-```
-
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -87,6 +78,37 @@ The MQTT topics for thermostat control follow a specific structure to ensure eff
   "required": ["command", "payload"]
 }
 ```
+
+### Set Schedule Mode
+```json
+"allowedQr": [92, 105],
+"command" : "set_schedule_mode"
+"payload" : { "schedule_mode" : "permanent|temporary|program|vacation" }
+```
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string",
+      "enum": ["set_schedule_mode"]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "schedule_mode": {
+          "type": "string",
+          "enum": ["permanent", "temporary", "program", "vacation"]
+        }
+      },
+      "required": ["schedule_mode"]
+    }
+  },
+  "required": ["command", "payload"]
+}
+```
+
 
 ### Set Transmit Interval
 ```json
