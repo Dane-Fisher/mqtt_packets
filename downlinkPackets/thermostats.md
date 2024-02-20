@@ -21,7 +21,7 @@ The MQTT topics for thermostat control follow a specific structure to ensure eff
 
 ### Ping
 ```json
-""allowedQr"": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
+"allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
 "command" : "ping"
 "payload" : {"jitter" : "true || false"}
 ```
