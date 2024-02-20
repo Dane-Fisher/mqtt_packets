@@ -10,19 +10,19 @@ Currently these are the Devices known to siteManager 2.0
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 
 1006|qr1006|1006|M53450-HPH|Thermostat|42|[Thermostat](devices/thermostats.md)|
-1009|qr1009|1009|M52450-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)
-92|qr92|92|T1000|Kono TStat|129|[Thermostat](devices/thermostats.md)
-105|qr105|105|T1001|Kono TStat Ctrl|179|[Thermostat](devices/thermostats.md)
-33|qr33|33|M54450-HP|Thermostat|129|[Thermostat](devices/thermostats.md)
-34|qr34|34|M54450-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)
-72|qr72|72|M54450-HA|Salus Thermostat|129|[Thermostat](devices/thermostats.md)
-36|qr36|36|M54450-MIN|Thermostat|179|[Thermostat](devices/thermostats.md)
-35|qr35|35|M54451-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)
-67|qr67|67|M54451-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)
-88|qr88|88|M54452-HCB|Thermostat|129|[Thermostat](devices/thermostats.md)
-37|qr37|37|W54450-MIN|Mini|176|[Mini](devices/minis.md)
-38|qr38|38|W54450-MIN-208|Mini 208|176|[Mini](devices/minis.md)
-77|qr77|77|W54450-HA|Salus Mini|176|[Mini](devices/minis.md)
-39|qr39|39|W54455-MIN|Mini|176|[Mini](devices/minis.md)
-63|qr63|63|W54600|Mini High Load|188|[Mini](devices/minis.md)
+1009|qr1009|1009|M52450-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)|
+92|qr92|92|T1000|Kono TStat|129|[Thermostat](devices/thermostats.md)|
+105|qr105|105|T1001|Kono TStat Ctrl|179|[Thermostat](devices/thermostats.md)|
+33|qr33|33|M54450-HP|Thermostat|129|[Thermostat](devices/thermostats.md)|
+34|qr34|34|M54450-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)|
+72|qr72|72|M54450-HA|Salus Thermostat|129|[Thermostat](devices/thermostats.md)|
+36|qr36|36|M54450-MIN|Thermostat|179|[Thermostat](devices/thermostats.md)|
+35|qr35|35|M54451-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)|
+67|qr67|67|M54451-HPH|Thermostat|129|[Thermostat](devices/thermostats.md)|
+88|qr88|88|M54452-HCB|Thermostat|129|[Thermostat](devices/thermostats.md)|
+37|qr37|37|W54450-MIN|Mini|176|[Mini](devices/minis.md)|
+38|qr38|38|W54450-MIN-208|Mini 208|176|[Mini](devices/minis.md)|
+77|qr77|77|W54450-HA|Salus Mini|176|[Mini](devices/minis.md)|
+39|qr39|39|W54455-MIN|Mini|176|[Mini](devices/minis.md)|
+63|qr63|63|W54600|Mini High Load|188|[Mini](devices/minis.md)|
 
