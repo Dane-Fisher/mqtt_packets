@@ -4,9 +4,9 @@
 
 This document provides an overview of the MQTT topics used to send commands that control thermostats. MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol commonly used in IoT (Internet of Things) applications.
 
-## Topic Structure
+## Message Structure
 
-The MQTT topics for thermostat control follow a specific structure to ensure effective communication between the control system and the thermostats. The topics are organized as follows:
+The MQTT Messages for thermostat control follow a specific structure to ensure effective communication between the control system and the thermostats. The topics are organized as follows:
 
 ## Related QRs
 ```json
