@@ -10,7 +10,9 @@ This document provides an overview of the MQTT topics used to send commands that
 [37, 38, 77, 39, 63]
 ```
 ## Related Uplink Responses
-
+```json
+[188,176]
+```
 
 ## Downlink Commands
 

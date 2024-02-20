@@ -15,7 +15,7 @@ The MQTT topics for thermostat control follow a specific structure to ensure eff
 
 ## Related Uplink Responses
 ```json
-[179,129,171]
+[179,129,171,42,]
 ```
 ## Downlink Commands
 
