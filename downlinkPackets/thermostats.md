@@ -26,6 +26,29 @@ The MQTT topics for thermostat control follow a specific structure to ensure eff
 "payload" : {"jitter" : "true || false"}
 ```
 
+```json 
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string",
+      "enum": ["ping"]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "jitter": {
+          "type": "boolean"
+        }
+      },
+      "required": ["jitter"]
+    }
+  },
+  "required": ["command", "payload"]
+}
+```
+
 ### Set Mode
 ```json
 "allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
