@@ -1,9 +1,20 @@
 # Overview
 H2o Degree uses MQTT as its main data flow pipeline. Devices like thermostats, water meters and humidity sensors all emit data, receive commands and have configurations. This is all controlled by a system comprised of applications, gateways, workers, and databases. To communicate with each other in a standardized way, mqtt messages in the form of downlinks (commands) and uplinks (responses) are used. They are nothing more than normal mqtt messages in the sense that they have a topic and a message part. Where they differ is in what the topic and message contain.
 
-This Repo will organize the devices supported by H2o Degree in the table below, and show the downlinks and uplinks for each. This will in turn give you everything you need to know about interacting with a device on an application level.
+This Repo will organize the devices supported by H2o Degree in the table below, and show the downlinks and uplinks for each. This will in turn will hopefully give you everything you need to know about interacting with a device on an application level.
 
-Click the link in the docs column to learn more about the device
+
+## Authentication
+Since the mqtt data passed back and forth is sensitive data, it is protected by an authentication flow. This flow is in the downlink direction - this means that the downlink commands your application sends will go through an auth server before getting any further down the pipe to a device. At a overview level, the [auth json structure](auth/auth.md) you provide will be concatenated with the commmand payload you send (see docs in table). A series of messages will be published regarding the state upon receival from the auth server. 
+
+**Read more about auth here:** 
+[Authentication](auth/auth.md)
+
+## Device level
+
+Each device supported by h2o degree has a unique qr code to identify it. This qr code is representive of the make, model, unitcode, sensor type, radio type, etc of the specific device. The Qr of a device is then related to a unit code response as well as the available commands. Many Qrs will share simmilar commands and responses, however not all of them do. To keep track, the device table below will show which qrs have which unit codes and the available commands. The table is uniquely identified by qr but grouped by general device type (ie thermostat). 
+
+Click the link in the docs column to learn more about the device, its available commands (downlinks) and the response you will get back (unit code)
 
 
 **Note:**
