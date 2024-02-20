@@ -8,29 +8,50 @@ This document provides an overview of the MQTT topics used to send commands that
 
 The MQTT topics for thermostat control follow a specific structure to ensure effective communication between the control system and the thermostats. The topics are organized as follows:
 
-## Downlinks
+## Related QRs
+[92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009]
 
+## Related Uplink Responses
+179,129,171
+
+## Downlink Commands
+
+### Ping
+""allowedQr"": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
+"command" : "ping"
+"payload" : {"jitter" : "true || false"}
 
 ### Set Mode
+"allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
 "command" : "set_mode"
 "payload" : { "mode" : "heat|cool|off"}
 
 ### Set Schedule Mode
+"allowedQr": [92, 105],
 "command" : "set_schedule_mode"
 "payload" : { "schedule_mode" : "permanent|temporary|program|vacation" }
 
 ### Set Transmit Interval
+"allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
 "command" : "set_tx_interval"
 "paylaod" : { "health_seconds" : [30,9000] , "commodity_seconds" : [30,9000] }
 
 ### Set Fan Mode
+"allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
 "command" : "set_fan_mode"
 "payload" : { "fan_mode" : "on|auto|intermittent|followprogram" }
 
 ### Set Set Point
+"allowedQr": [92, 105, 36, 33, 34, 35, 67, 1001, 1006, 1009],
 "command" : "set_set_point"
 "payload" : { "mode" : "heat|cool", "temperature_f" : [35,100] }
 
-### Set Override 
-"command" : "set_override"
-"payload" : { "override" : "clear|heat_on|heat_off" }
+
+
+## Example Downlink ping command
+
+
+
+
+
+
