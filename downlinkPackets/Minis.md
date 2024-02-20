@@ -6,8 +6,9 @@ This document provides an overview of the MQTT topics used to send commands that
 
 
 ## Related QRs
+```json
 [37, 38, 77, 39, 63]
-
+```
 ## Related Uplink Responses
 
 
