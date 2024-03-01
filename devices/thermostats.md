@@ -228,11 +228,31 @@ The MQTT Messages for thermostat control follow a specific structure to ensure e
 }
 ```
 
-### Get Limits
-what are the heat setpoint limits 
-what are the cool setpoint limits
+### Get Zone Settings
+```json
+"allowedQr": [105, 36],
+"command" : "get_zone_settings"
+"payload" : {}
+```
+
+```json 
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "required": ["command", "payload"]
+}
+```
 
 ### Set limits
+
 set the heat setpoint limits 
 set the cool setpoint limits
 
