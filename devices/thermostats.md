@@ -251,21 +251,62 @@ The MQTT Messages for thermostat control follow a specific structure to ensure e
 }
 ```
 
-### Set limits
+### Set Zone Settings
 
-set the heat setpoint limits 
-set the cool setpoint limits
+2 zones (2 points in the day)  1 master schdeule for the week
 
-### Set schedule
-4 zones (4 points in the day)  1 master schdeule for the week
-- set into schedule mode
+```json
+"allowedQr":[105,36],
+"command" : "set_zone_settings",
+"payload" : {  
+                    "zone_1_hour_24hr" : 5,
+                    "zone_1_minute": 13,
+                    "zone_1_set_point_f" : 64,
+                    "zone_1_set_limit_f" : 73,
+                    "zone_2_hour_24hr" : 21,
+                    "zone_2_minute" : 14,
+                    "zone_2_set_point_f" : 65,
+                    "zone_2_set_limit_f" : 75
+                    } 
+```
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "zone_1_hour_24hr": { "type": "integer" },
+        "zone_1_minute": { "type": "integer" },
+        "zone_1_set_point_f": { "type": "integer" },
+        "zone_1_set_limit_f": { "type": "integer" },
+        "zone_2_hour_24hr": { "type": "integer" },
+        "zone_2_minute": { "type": "integer" },
+        "zone_2_set_point_f": { "type": "integer" },
+        "zone_2_set_limit_f": { "type": "integer" }
+      },
+      "required": [
+        "zone_1_hour_24hr",
+        "zone_1_minute",
+        "zone_1_set_point_f",
+        "zone_1_set_limit_f",
+        "zone_2_hour_24hr",
+        "zone_2_minute",
+        "zone_2_set_point_f",
+        "zone_2_set_limit_f"
+      ]
+    }
+  },
+  "required": ["command", "payload"]
+}
+```
 
 
-### Clear schedule 
-
-- set into perminant mode
-
-## Example Downlink ping command
 
 
 
